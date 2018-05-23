@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html测试</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul{
+			width: 1000px;
+			min-height: 1000px;
+			background-color: #eee;
+		}
+		ul li{
+			width: 100%;min-height: 30px;
+			list-style-type: none;
+		}
+		.tip{
+			width: 50px;max-height: 50px;border-radius: 50%;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+    <main>
+    	<center>
+    		<ul id="news_list">
+    			<li><a href="#tips">li1</a><li>
+    			<li><a class="tip" name="tips">100</a></li>
+    		</ul>
+    	</center>
+    </main>
+    <script type="text/javascript">
+    	var x=document.getElementById("news_list").getElementsByTagName("li");
+    	for(i=0;i<1500;i++)
+    	{
+    		var li=document.createElement("li");
+    		x[i].appendChild(li);
+    		li.innerHTML=i;
+    	}
+    </script>
+</body>
+</html>
